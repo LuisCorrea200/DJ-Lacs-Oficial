@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+header {
+    background: #000;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Efecto de desplazamiento */
+.reveal {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.8s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos del botón */
+button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background: #e68900;
+    transform: scale(1.1);
+}
+
+/* Fondo animado */
+#fondoAnimado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Estilos del slider */
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Contenedor del formulario */
+#formularioReserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+/* Campos de entrada */
+#formularioReserva input {
+    width: 200px; /* Ajusta el ancho */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: black;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Estilos del botón */
+#enviarReserva {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+#enviarReserva:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* Ventana o Alerta Flotante */
+/* Modal flotante */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: linear-gradient(135deg, #38b6ff, #6c63ff);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Contenido del modal */
+.modal-content {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    transform: scale(0.8);
+    animation: scaleIn 0.4s ease-out forwards;
+}
+
+/* Icono */
+.modal-icon {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+/* Botón de cierre */
+.close {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Botón de aceptar */
+#cerrarModal {
+    background: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#cerrarModal:hover {
+    background: #e6b800;
+    transform: scale(1.1);
+}
+
+
+/* Para El correo */
+
+a {
+    color: #00ffcc; /* Un color llamativo */
+    text-decoration: none; /* Eliminar el subrayado */
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline; /* Agregar subrayado al pasar el mouse */
+}
+
+.contacto-container {
+    background: rgba(0, 0, 0, 0.5); /* Negro con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+
+.contacto-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+a {
+    color: #00ffcc; /* Color llamativo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
